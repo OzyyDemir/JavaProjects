@@ -20,18 +20,21 @@ public class UserManager implements UserService{
 
 	@Override
 	public void add(User user) {
-		if(user.getPassword().length()<8) {
-			System.out.println("þifre kýsa");
-			return;
-		}
-		this.userDao.add(user);
+		
+		userDao.add(user);
 		
 	}
 
 	@Override
 	public List<User> getall() {
 		// TODO Auto-generated method stub
-		return null;
+		return userDao.getall();
+	}
+
+	@Override
+	public void signIn(User user) {
+		
+		
 	}
 	
 
